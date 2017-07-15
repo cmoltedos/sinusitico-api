@@ -25,7 +25,7 @@ SECRET_KEY = 'ba*219m=!rt*bhazz_@&xb^#0+pyqp0_#3)e-k+u!+nb0$*+zr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['172.16.28.45','0.0.0.0']
 
 
 # Application definition
