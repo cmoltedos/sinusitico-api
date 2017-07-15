@@ -7,12 +7,12 @@ class Lead(models.Model):
     pub_date = models.DateTimeField('date published')
     email = models.EmailField()
     location = models.CharField(max_length=200)
-    enterprise = 0
-    role = 0
-    address = 0
-    phone = 0
-    tags = 0
-    photo = 0
-    facebook_link = 0
-    linkedin_link = 0
-    instagram_link = 0
+    enterprise =  models.CharField(max_length=200)
+    role =  models.CharField(max_length=200)
+    address =  models.CharField(max_length=200)
+    phone = models.IntegerField()
+    tags = models.CharField(max_length=200)
+    photo = models.ImageField()
+    facebook_link = models.URLField()
+    linkedin_link = models.URLField()
+    instagram_link = models.URLField()
