@@ -1,12 +1,9 @@
 import datetime
 from django.forms import model_to_dict
 from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render
-from django.template import loader
 from django.utils.timezone import now
 import json
 # Create your views here.
-from django.utils.translation import template
 from django.views.decorators.csrf import csrf_exempt
 from publish.models import Lead, Enterprise, User, LeadStatus
 from publish import charge_fake_data as fake

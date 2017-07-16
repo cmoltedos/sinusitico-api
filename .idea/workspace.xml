@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a94f92fe-9565-4c7b-a4d0-f8e91b4f2174" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reset_db.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publish/views.py" afterPath="$PROJECT_DIR$/publish/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,16 +16,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sinusitico_Django/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="20" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/publish/models.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -55,14 +46,13 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/publish/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1547">
-              <caret line="130" column="55" lean-forward="false" selection-start-line="130" selection-start-column="55" selection-end-line="130" selection-end-column="55" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#485#549#0" expanded="false" />
-                <element signature="e#591#1410#0" expanded="false" />
-                <element signature="e#2157#2375#0" expanded="false" />
-                <element signature="e#3151#3811#0" expanded="false" />
+                <element signature="e#368#432#0" expanded="false" />
+                <element signature="e#474#1293#0" expanded="false" />
+                <element signature="e#2040#2258#0" expanded="false" />
+                <element signature="e#3034#3694#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -71,22 +61,32 @@
       <file leaf-file-name="reset_db.bat" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reset_db.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="294">
+              <first_editor relative-caret-position="323">
                 <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reset_db.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/reset_db.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,11 +162,11 @@
         <option value="$PROJECT_DIR$/publish/charge_fake_data.py" />
         <option value="$PROJECT_DIR$/publish/models.py" />
         <option value="$PROJECT_DIR$/templates/stats.html" />
-        <option value="$PROJECT_DIR$/publish/views.py" />
         <option value="$PROJECT_DIR$/publish/urls.py" />
-        <option value="$PROJECT_DIR$/reset_db.sh" />
         <option value="$PROJECT_DIR$/reset_db.bat" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/publish/views.py" />
+        <option value="$PROJECT_DIR$/reset_db.sh" />
       </list>
     </option>
   </component>
@@ -250,24 +250,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="publish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sinusitico_API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sinusitico_API" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="publish" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -627,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500226315289</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="CorsHeader reference">
+      <created>1500226341729</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1500226341729</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -703,7 +692,8 @@
     <MESSAGE value="Readme completed" />
     <MESSAGE value="Add fake data and QR" />
     <MESSAGE value="CrosHeader reference" />
-    <option name="LAST_COMMIT_MESSAGE" value="CrosHeader reference" />
+    <MESSAGE value="CorsHeader reference" />
+    <option name="LAST_COMMIT_MESSAGE" value="CorsHeader reference" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -748,11 +738,10 @@
         <state relative-caret-position="1547">
           <caret line="130" column="55" lean-forward="false" selection-start-line="130" selection-start-column="55" selection-end-line="130" selection-end-column="55" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#485#549#0" expanded="false" />
-            <element signature="e#591#1410#0" expanded="false" />
-            <element signature="e#2157#2375#0" expanded="false" />
-            <element signature="e#3151#3811#0" expanded="false" />
+            <element signature="e#368#432#0" expanded="false" />
+            <element signature="e#474#1293#0" expanded="false" />
+            <element signature="e#2040#2258#0" expanded="false" />
+            <element signature="e#3034#3694#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -844,11 +833,10 @@
         <state relative-caret-position="884">
           <caret line="60" column="23" lean-forward="false" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#485#549#0" expanded="false" />
-            <element signature="e#591#1410#0" expanded="false" />
-            <element signature="e#2157#2375#0" expanded="false" />
-            <element signature="e#3151#3811#0" expanded="false" />
+            <element signature="e#368#432#0" expanded="false" />
+            <element signature="e#474#1293#0" expanded="false" />
+            <element signature="e#2040#2258#0" expanded="false" />
+            <element signature="e#3034#3694#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -924,11 +912,10 @@
         <state relative-caret-position="68">
           <caret line="5" column="67" lean-forward="true" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#485#549#0" expanded="false" />
-            <element signature="e#591#1410#0" expanded="false" />
-            <element signature="e#2157#2375#0" expanded="false" />
-            <element signature="e#3151#3811#0" expanded="false" />
+            <element signature="e#368#432#0" expanded="false" />
+            <element signature="e#474#1293#0" expanded="false" />
+            <element signature="e#2040#2258#0" expanded="false" />
+            <element signature="e#3034#3694#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1031,6 +1018,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
           <caret line="1059" column="8" lean-forward="false" selection-start-line="1059" selection-start-column="8" selection-end-line="1059" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,32 +1098,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/publish/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="130" column="55" lean-forward="false" selection-start-line="130" selection-start-column="55" selection-end-line="130" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#485#549#0" expanded="false" />
-            <element signature="e#591#1410#0" expanded="false" />
-            <element signature="e#2157#2375#0" expanded="false" />
-            <element signature="e#3151#3811#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reset_db.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="294">
+          <first_editor relative-caret-position="323">
             <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
             <folding />
           </first_editor>
@@ -1145,6 +1111,35 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reset_db.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/publish/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#368#432#0" expanded="false" />
+            <element signature="e#474#1293#0" expanded="false" />
+            <element signature="e#2040#2258#0" expanded="false" />
+            <element signature="e#3034#3694#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reset_db.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
           <folding />
         </state>
       </provider>
