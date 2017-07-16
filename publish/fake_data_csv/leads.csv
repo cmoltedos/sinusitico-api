@@ -1,0 +1,31 @@
+ID,Name,open date,email,Company,Location,Role,Address,Phone,Tags,Facebook,Linkedin,Instagram,Oportunity,Close date
+1,Leonardo Vergara,10-06-17,Leonardo.Vergara@gmail.com,1,-33.423620 -70.609156,CEO,Ricardo Lyon 220,562 2647 3748,,,,,Busca una cuenta con beneficios premium,20-06-17
+2,Felipe Ramirez,05-06-17,Felipe.Ramirez@gmail.com,2,-33.415161 -70.588621,Gerente de Marketing,Apoquindo 4000,562 7483 4765,,,,,Le interesa comprar un auto con un crédito personal,15-06-17
+3,Sergio Ponce,05-06-17,Sergio.Ponce@gmail.com,3,-33.416453 -70.589331,CEO,Alcantara 88,562 7469 2763,,,,,Aceptaría una cuenta gratis,
+4,Mantías Bendel,19-06-17,Mantías.Bendel@gmail.com,4,-33.393926 -70.577801,Brand Manager,Av. Vitacura 5560,562 4517 5973,,,,,,29-06-17
+5,Victor Manzur,22-06-17,Victor.Manzur@gmail.com,1,-33.423620 -70.609156,Gerente de Operaciones,Ricardo Lyon 220,562 8573 4587,,,,,,02-07-17
+6,Ximena Cisternas,25-06-17,Ximena.Cisternas@gmail.com,2,-33.415161 -70.588621,CEO,Apoquindo 4000,562 8734 5627,,,,,,
+7,Catherine Partarrieu,28-06-17,Catherine.Partarrieu@gmail.com,1,-33.423620 -70.609156,Gerente de Finanzas,Ricardo Lyon 220,562 6538 0989,,,,,,08-07-17
+8,Kenneth Daniels,02-06-17,Kenneth.Daniels@gmail.com,2,-33.415161 -70.588621,Gerente de RRHH,Apoquindo 4000,562 8749 7537,,,,,Quiere un crédito de consumo,
+9,Ricardo Betinyani,05-06-17,Ricardo.Betinyani@gmail.com,3,-33.416453 -70.589331,Gerente de TI,Alcantara 88,562 6374 8735,,,,,Se comprará una propiedad a fin de año,
+10,Marcelo Valverde,12-06-17,Marcelo.Valverde@gmail.com,4,-33.393926 -70.577801,Gerente de Finanzas,Av. Vitacura 5560,562 3651 1984,,,,,,22-06-17
+11,Andrés Errazuriz,17-06-17,Andrés.Errazuriz@gmail.com,5,,Gerente de Operaciones,,562 7384 6428,,,,,,
+12,Vinicio Velazquez,22-06-17,Vinicio.Velazquez@gmail.com,6,,Gerente de Finanzas,,562 8740 8403,,,,,,02-07-17
+13,Diego Guerrero,27-06-17,Diego.Guerrero@gmail.com,7,-33.404103 -70.569963,Gerente de RRHH,Cerro el Plomo 400,562 6384 0988,,,,,,07-07-17
+14,Mauricio Castro,02-07-17,Mauricio.Castro@gmail.com,8,,Gerente de Marketing,,562 3399 2562,,,,,Necesita una tarjeta con supo mayor a 20 millones,
+15,Sebastian Celis,05-06-17,Sebastian.Celis@gmail.com,9,-33.409888 -70.571260,,Apoquindo 5600,562 1112 2763,,,,,Quiere una cuenta preferencial,
+16,Nelson Villagran,12-07-17,Nelson.Villagran@gmail.com,6,,Gerente de Marketing,,562 8849 3833,,,,,,22-07-17
+17,Monica Pimentel,05-06-17,Monica.Pimentel@gmail.com,7,-33.404103 -70.569963,Gerente de RRHH,Cerro el Plomo 400,562 6534 8764,,,,,Quiere cuenta para su esposa con Programa Latam Pass,
+18,Raul Aedo,07-07-17,Raul.Aedo@gmail.com,1,-33.423620 -70.609156,CEO,Ricardo Lyon 220,562 8847 6538,,,,,Necesita cuentas vista para su hijos,17-07-17
+19,Ana Henrriquez,03-07-17,Ana.Henrriquez@gmail.com,2,-33.415161 -70.588621,Gerente de Operaciones,Apoquindo 4000,562 0042 7722,,,,,,13-07-17
+20,Rodrigo Roa,30-06-17,Rodrigo.Roa@gmail.com,3,-33.416453 -70.589331,Gerente de RRHH,Alcantara 88,562 6374 8735,,,,,Busca cuenta para esposa,10-07-17
+21,Carmen Barrales,07-07-17,Carmen.Barrales@gmail.com,4,-33.393926 -70.577801,,Av. Vitacura 5560,562 3651 1984,,,,,Quiere tarjeta sin comisión internacional,
+22,Clara Grosman,24-06-17,Clara.Grosman@gmail.com,5,,Gerente de Marketing,,562 7384 6428,,,,,Quiere tarjeta con cupo en dólares,
+23,Carmen Echeñique,21-06-17,Carmen.Echeñique@gmail.com,6,,CEO,,562 8740 8403,,,,,,01-07-17
+24,Marcela Velazco,05-06-17,Marcela.Velazco@gmail.com,7,-33.404103 -70.569963,CEO,Cerro el Plomo 400,562 6384 0988,,,,,,
+25,Felipe Bosh,29-06-17,Felipe.Bosh@gmail.com,8,,Gerente de TI,,562 3399 2562,,,,,,
+26,Miriam Manzur,03-07-17,Miriam.Manzur@gmail.com,9,-33.409888 -70.571260,Gerente de Marketing,Apoquindo 5600,562 1112 2763,,,,,Quiere cuenta de euros,13-07-17
+27,Isabel Boetch,07-07-17,Isabel.Boetch@gmail.com,6,,,,562 8849 3833,,,,,Realiza muchas transferencia al extrajero,15-07-17
+28,Sergio Opazo,07-07-17,Sergio.Opazo@gmail.com,7,-33.404103 -70.569963,Gerente de RRHH,Cerro el Plomo 400,562 6534 8764,,,,,,
+29,Oscar Borquez,15-07-17,Oscar.Borquez@gmail.com,8,,Gerente de TI,,562 8847 6538,,,,,,
+30,Carolina Quintana,19-07-17,Carolina.Quintana@gmail.com,9,-33.409888 -70.571260,Gerente de TI,Apoquindo 5600,562 0042 7722,,,,,Viaja 3 veces al mes,29-06-17
