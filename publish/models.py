@@ -46,3 +46,6 @@ class LeadStatus(models.Model):
 
     def is_taked(self):
         return bool(self.accepted + self.in_progress + self.close_lost + self.close_won)
+
+    def is_close(self):
+        return bool(self.close_lost + self.close_won)

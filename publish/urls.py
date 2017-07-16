@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^login', views.login, name='login'),
     url(r'^list_user', views.get_leads_by_user, name='list_by_user'),
     url(r'^lead_update', views.change_leadstatus, name='change_leadstatus'),
-
+    url(r'^stats', views.get_stats, name='stats'),
+    url(r'^stats_user', views.get_stats_by_user, name='stats_by_user'),
 ]

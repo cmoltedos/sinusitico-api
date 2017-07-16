@@ -1,9 +1,12 @@
 import datetime
 from django.forms import model_to_dict
 from django.http import HttpResponse, JsonResponse
+from django.shortcuts import render
+from django.template import loader
 from django.utils.timezone import now
 import json
 # Create your views here.
+from django.utils.translation import template
 from django.views.decorators.csrf import csrf_exempt
 from publish.models import Lead, Enterprise, User, LeadStatus
 from publish import charge_fake_data as fake
@@ -23,14 +26,16 @@ def new_lead(request):
     lead.address = json_data.get('direccion', None)
     lead.role = json_data.get('cargo', None)
     lead.oportunity = json_data.get('comentarios', None)
+    lead.location = json_data.get('location', None)
     enterprise = json_data.get('empresa', None)
     if enterprise:
         lead.enterprise = Enterprise.objects.get(id=enterprise['id'])
     lead.save()
-    user_id = request.META['X_LEADIN_USER']
+    user_id = request.GET['userid']
+    user = User.objects.get(id=user_id)
     leadstatus = LeadStatus()
     leadstatus.lead = lead
-    leadstatus.publisher = User.objects.get(id=user_id)
+    leadstatus.publisher = user
     leadstatus.save()
     return HttpResponse()
 
@@ -65,7 +70,7 @@ def get_leads_by_user(request):
     user = User.objects.get(id=user_id)
     results = list()
     for leadstatus in LeadStatus.objects.all():
-        if leadstatus.consumer_id != user.id:
+        if leadstatus.consumer_id != user.id or leadstatus.is_close():
             continue
         lead = leadstatus.lead
         day_pass = now() - lead.pub_date
@@ -82,7 +87,7 @@ def change_leadstatus(request):
     user_id = request.GET['userid']
     user = User.objects.get(id=user_id)
     json_data = json.loads(request.body)
-    lead = Lead.objects.get(id=json_data['id'])
+    lead = Lead.objects.get(id=json_data['lead'])
     leadstatus = LeadStatus.objects.get(lead=lead)
     leadstatus.consumer = user
     leadstatus.accepted = json_data['accepted'] if json_data['accepted'] else False
@@ -91,3 +96,36 @@ def change_leadstatus(request):
     leadstatus.close_won = json_data['close_won'] if json_data['close_won'] else False
     leadstatus.save()
     return JsonResponse({}, safe=False)
+
+def get_stats(request):
+    results = [
+        ["Stat", "Amount"],
+        ["Pending", len([1 for object in LeadStatus.objects.all() if not object.is_taked()])],
+        ["Accepted", LeadStatus.objects.filter(accepted=True).count()],
+        ["In progress", LeadStatus.objects.filter(in_progress=True).count()],
+        ["Lost", LeadStatus.objects.filter(close_lost=True).count()],
+        ["Won", LeadStatus.objects.filter(close_won=True).count()],
+    ]
+    return JsonResponse({'stats': results}, safe=False)
+
+def get_stats_by_user(request):
+    user_id = request.GET['userid']
+    user = User.objects.get(id=user_id)
+    if user.user_type == 'consumer':
+        results = [
+            ["Stat", "Amount"],
+            ["Accepted", LeadStatus.objects.filter(accepted=True, consumer=user).count()],
+            ["in progress", LeadStatus.objects.filter(in_progress=True, consumer=user).count()],
+            ["lost", LeadStatus.objects.filter(close_lost=True, consumer=user).count()],
+            ["won", LeadStatus.objects.filter(close_won=True, consumer=user).count()],
+        ]
+    else:
+        results = [
+            ["Stat", "Amount"],
+            ["Pending", len([1 for object in LeadStatus.objects.filter(publisher=user) if not object.is_taked()])],
+            ["Accepted", LeadStatus.objects.filter(accepted=True, publisher=user).count()],
+            ["In progress", LeadStatus.objects.filter(in_progress=True, publisher=user).count()],
+            ["Lost", LeadStatus.objects.filter(close_lost=True, publisher=user).count()],
+            ["Won", LeadStatus.objects.filter(close_won=True, publisher=user).count()],
+        ]
+    return JsonResponse({'stats': results}, safe=False)
