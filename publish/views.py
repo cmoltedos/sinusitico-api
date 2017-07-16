@@ -27,11 +27,22 @@ def new_lead(request):
     if enterprise:
         lead.enterprise = Enterprise.objects.get(id=enterprise['id'])
     lead.save()
+    user_id = request.META['X_LEADIN_USER']
+    leadstatus = LeadStatus()
+    leadstatus.lead = lead
+    leadstatus.publisher = User.objects.get(id=user_id)
+    leadstatus.save()
     return HttpResponse()
 
 def get_leads(request):
+    if len(LeadStatus.objects.all()) <= 0:
+        fake.charge_leads()
+        fake.charge_leadstatus()
     results = list()
-    for lead in Lead.objects.all():
+    for leadstatus in LeadStatus.objects.all():
+        if leadstatus.is_taked():
+            continue
+        lead = leadstatus.lead
         day_pass = now() - lead.pub_date
         result = model_to_dict(lead)
         is_premium = len([1 for value in result.values() if value != None]) >= 9
@@ -39,19 +50,10 @@ def get_leads(request):
         results.append(result)
     return JsonResponse({'list': results}, safe=False)
 
-def tests_leads(request):
-    results = list()
-    for lead in Lead.objects.all():
-        day_pass = now() - lead.pub_date
-        result = model_to_dict(lead)
-        is_premium = len([1 for value in result.values() if value == None]) == 5
-        print(is_premium)
-        result.update({'days_pass': day_pass.days, 'is_premium': is_premium})
-        results.append(result)
-    return JsonResponse(results, safe=False)
-
 @csrf_exempt
 def login(request):
+    if len(User.objects.all()) <= 0:
+        fake.charge_users()
     json_data = json.loads(request.body)
     user = User.objects.get(name=json_data['username'])
     return JsonResponse(model_to_dict(user), safe=False)
@@ -60,3 +62,4 @@ def charge_data(request):
     # fake.charge_users()
     fake.charge_leads()
     return HttpResponse("Data upload")
+

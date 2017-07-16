@@ -7,7 +7,8 @@ class Enterprise(models.Model):
     category = models.CharField(max_length=20, null=True)
 
 class User(models.Model):
-    name = models.CharField(max_length=20, null=True)
+    username = models.CharField(max_length=20, null=True)
+    name = models.CharField(max_length=40, null=True)
     email = models.CharField(max_length=50, null=True)
     location = models.CharField(max_length=200, null=True)
     user_type = models.CharField(max_length=20, null=False)
@@ -36,3 +37,6 @@ class LeadStatus(models.Model):
     close_lost = models.BooleanField(default=False)
     publisher = models.ForeignKey(User, on_delete=models.CASCADE, related_name='publisher')
     consumer = models.ForeignKey(User, on_delete=models.CASCADE, related_name='consumer', null=True)
+
+    def is_taked(self):
+        return bool(self.accepted + self.in_progress + self.close_lost + self.close_won)
