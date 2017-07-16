@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^test$', views.tests_leads, name='tests'),
     url(r'^enterprise', enterprise.get_enterprise, name='list_enterprices'),
     url(r'^login', views.login, name='login'),
+    url(r'^fake', views.charge_data, name='fake'),
 ]

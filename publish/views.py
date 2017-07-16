@@ -6,6 +6,7 @@ import json
 # Create your views here.
 from django.views.decorators.csrf import csrf_exempt
 from publish.models import Lead, Enterprise, User, LeadStatus
+from publish import charge_fake_data as fake
 
 
 def index(request):
@@ -54,3 +55,8 @@ def login(request):
     json_data = json.loads(request.body)
     user = User.objects.get(name=json_data['username'])
     return JsonResponse(model_to_dict(user), safe=False)
+
+def charge_data(request):
+    # fake.charge_users()
+    fake.charge_leads()
+    return HttpResponse("Data upload")
