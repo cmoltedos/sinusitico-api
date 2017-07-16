@@ -48,6 +48,7 @@ def get_leads(request):
         result['location'] = lead.location_parser()
         is_premium = len([1 for value in result.values() if value != None]) >= 9
         result.update({'days_pass': day_pass.days, 'is_premium': is_premium})
+        result.update(model_to_dict(leadstatus))
         results.append(result)
     return JsonResponse({'list': results}, safe=False)
 
@@ -56,11 +57,11 @@ def login(request):
     if len(User.objects.all()) <= 0:
         fake.charge_users()
     json_data = json.loads(request.body)
-    user = User.objects.get(name=json_data['username'])
+    user = User.objects.get(username=json_data['username'])
     return JsonResponse(model_to_dict(user), safe=False)
 
 def get_leads_by_user(request):
-    user_id = request.META['X_LEADIN_USER']
+    user_id = request.GET['userid']
     user = User.objects.get(id=user_id)
     results = list()
     for leadstatus in LeadStatus.objects.all():
@@ -69,7 +70,24 @@ def get_leads_by_user(request):
         lead = leadstatus.lead
         day_pass = now() - lead.pub_date
         result = model_to_dict(lead)
+        result['location'] = lead.location_parser()
         is_premium = len([1 for value in result.values() if value != None]) >= 9
         result.update({'days_pass': day_pass.days, 'is_premium': is_premium})
+        result.update(model_to_dict(leadstatus))
         results.append(result)
     return JsonResponse({'list': results}, safe=False)
+
+@csrf_exempt
+def change_leadstatus(request):
+    user_id = request.GET['userid']
+    user = User.objects.get(id=user_id)
+    json_data = json.loads(request.body)
+    lead = Lead.objects.get(id=json_data['id'])
+    leadstatus = LeadStatus.objects.get(lead=lead)
+    leadstatus.consumer = user
+    leadstatus.accepted = json_data['accepted'] if json_data['accepted'] else False
+    leadstatus.in_progress = json_data['in_progress'] if json_data['in_progress'] else False
+    leadstatus.close_lost = json_data['close_lost'] if json_data['close_lost'] else False
+    leadstatus.close_won = json_data['close_won'] if json_data['close_won'] else False
+    leadstatus.save()
+    return JsonResponse({}, safe=False)

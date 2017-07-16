@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a94f92fe-9565-4c7b-a4d0-f8e91b4f2174" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publish/charge_fake_data.py" afterPath="$PROJECT_DIR$/publish/charge_fake_data.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publish/models.py" afterPath="$PROJECT_DIR$/publish/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publish/urls.py" afterPath="$PROJECT_DIR$/publish/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/publish/views.py" afterPath="$PROJECT_DIR$/publish/views.py" />
     </list>
@@ -41,12 +39,10 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/publish/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            <state relative-caret-position="201">
+              <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <element signature="e#585#1577#0" expanded="false" />
-                <element signature="e#1615#2184#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -55,12 +51,11 @@
       <file leaf-file-name="charge_fake_data.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/publish/charge_fake_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="544">
               <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
               <folding>
                 <element signature="e#0#61#0" expanded="true" />
                 <element signature="e#103#703#0" expanded="false" />
-                <element signature="e#729#2144#0" expanded="false" />
                 <element signature="e#2175#2625#0" expanded="false" />
                 <element signature="e#2656#3652#0" expanded="false" />
               </folding>
@@ -71,10 +66,12 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/publish/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="47" column="51" lean-forward="false" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
+            <state relative-caret-position="116">
+              <caret line="72" column="51" lean-forward="false" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#368#432#0" expanded="false" />
+                <element signature="e#474#1233#0" expanded="false" />
+                <element signature="e#1980#2198#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -95,8 +92,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/publish/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="66" lean-forward="false" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
+            <state relative-caret-position="204">
+              <caret line="12" column="73" lean-forward="false" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -159,10 +156,10 @@
         <option value="$PROJECT_DIR$/publish/admin.py" />
         <option value="$PROJECT_DIR$/publish/charga_fake_data.py" />
         <option value="$PROJECT_DIR$/publish/enterprise.py" />
-        <option value="$PROJECT_DIR$/publish/urls.py" />
         <option value="$PROJECT_DIR$/publish/charge_fake_data.py" />
-        <option value="$PROJECT_DIR$/publish/views.py" />
         <option value="$PROJECT_DIR$/publish/models.py" />
+        <option value="$PROJECT_DIR$/publish/urls.py" />
+        <option value="$PROJECT_DIR$/publish/views.py" />
       </list>
     </option>
   </component>
@@ -556,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500211913215</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Loads leads by user and not accepted">
+      <created>1500213092131</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1500213092131</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -569,7 +573,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.49749374" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20496084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20496084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -622,7 +626,8 @@
     <MESSAGE value="Login and dummy data charging" />
     <MESSAGE value="Charging dummy data complete for leads and users" />
     <MESSAGE value="Charge fake data for all tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Charge fake data for all tables" />
+    <MESSAGE value="Loads leads by user and not accepted" />
+    <option name="LAST_COMMIT_MESSAGE" value="Loads leads by user and not accepted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -653,8 +658,6 @@
           <caret line="37" column="100" lean-forward="true" selection-start-line="37" selection-start-column="100" selection-end-line="37" selection-end-column="100" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#585#1577#0" expanded="false" />
-            <element signature="e#1615#2184#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -664,7 +667,9 @@
         <state relative-caret-position="884">
           <caret line="60" column="23" lean-forward="false" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#368#432#0" expanded="false" />
+            <element signature="e#474#1233#0" expanded="false" />
+            <element signature="e#1980#2198#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -714,7 +719,6 @@
           <folding>
             <element signature="e#0#61#0" expanded="true" />
             <element signature="e#103#703#0" expanded="false" />
-            <element signature="e#729#2144#0" expanded="false" />
             <element signature="e#2175#2625#0" expanded="false" />
             <element signature="e#2656#3652#0" expanded="false" />
           </folding>
@@ -742,7 +746,9 @@
         <state relative-caret-position="68">
           <caret line="5" column="67" lean-forward="true" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#368#432#0" expanded="false" />
+            <element signature="e#474#1233#0" expanded="false" />
+            <element signature="e#1980#2198#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -788,8 +794,6 @@
           <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#585#1577#0" expanded="false" />
-            <element signature="e#1615#2184#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -887,10 +891,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/publish/charge_fake_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+            <element signature="e#103#703#0" expanded="false" />
+            <element signature="e#2175#2625#0" expanded="false" />
+            <element signature="e#2656#3652#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/publish/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="66" lean-forward="false" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
+        <state relative-caret-position="204">
+          <caret line="12" column="73" lean-forward="false" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -899,36 +916,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="201">
+          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#585#1577#0" expanded="false" />
-            <element signature="e#1615#2184#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/publish/charge_fake_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="65" column="24" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-            <element signature="e#103#703#0" expanded="false" />
-            <element signature="e#729#2144#0" expanded="false" />
-            <element signature="e#2175#2625#0" expanded="false" />
-            <element signature="e#2656#3652#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/publish/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="47" column="51" lean-forward="false" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
+        <state relative-caret-position="116">
+          <caret line="72" column="51" lean-forward="false" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#368#432#0" expanded="false" />
+            <element signature="e#474#1233#0" expanded="false" />
+            <element signature="e#1980#2198#0" expanded="false" />
           </folding>
         </state>
       </provider>
