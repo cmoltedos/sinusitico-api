@@ -18,3 +18,4 @@ Project site: http://www.hackathon.io/sinusitico
 ## Pre-requisite
 
 CorsHeaders: `pip install django-cors-headers`
+Json: `pip install ujson`
