@@ -14,3 +14,7 @@ Leadin let your Key Account Manager (KAM) register leads and manage them by othe
 Increase your sells with certificate leads.
 
 Project site: http://www.hackathon.io/sinusitico
+
+## Pre-requisite
+
+CroshHeaders: `pip install django-cors-headers`
