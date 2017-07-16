@@ -35,4 +35,4 @@ class LeadStatus(models.Model):
     close_won = models.BooleanField(default=False)
     close_lost = models.BooleanField(default=False)
     publisher = models.ForeignKey(User, on_delete=models.CASCADE, related_name='publisher')
-    consumer = models.ForeignKey(User, on_delete=models.CASCADE, related_name='consumer')
+    consumer = models.ForeignKey(User, on_delete=models.CASCADE, related_name='consumer', null=True)
