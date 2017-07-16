@@ -83,7 +83,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="294">
-                <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+                <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -620,7 +620,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500225532891</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="CrosHeader reference">
+      <created>1500226315289</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1500226315289</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -695,7 +702,8 @@
     <MESSAGE value="Windows script to reset db" />
     <MESSAGE value="Readme completed" />
     <MESSAGE value="Add fake data and QR" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add fake data and QR" />
+    <MESSAGE value="CrosHeader reference" />
+    <option name="LAST_COMMIT_MESSAGE" value="CrosHeader reference" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1128,7 +1136,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="294">
-            <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+            <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
             <folding />
           </first_editor>
           <second_editor />

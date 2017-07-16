@@ -17,4 +17,4 @@ Project site: http://www.hackathon.io/sinusitico
 
 ## Pre-requisite
 
-CroshHeaders: `pip install django-cors-headers`
+CorsHeaders: `pip install django-cors-headers`
