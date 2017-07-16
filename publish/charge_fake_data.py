@@ -19,6 +19,8 @@ def charge_users():
     return True
 
 def charge_leads():
+    if len(Enterprise.objects.all()) <= 0:
+        charge_enterprise()
     init = True
     with open('publish/fake_data_csv/leads.csv') as data_file:
         for line in data_file:
@@ -31,7 +33,7 @@ def charge_leads():
             new_lead.pub_date = datetime.datetime.strptime(data[1],'%d-%m-%y') if data[1] else None
             new_lead.email = data[2] if data[2] else None
             if data[3]:
-                new_lead.enterprise = Enterprise.objects.get(id=data[3])
+                new_lead.enterprise = Enterprise.objects.get(id=int(data[3]))
             else:
                 new_lead.enterprise = None
             new_lead.location = data[4] if data[4] else None
@@ -62,6 +64,8 @@ def charge_enterprise():
     return True
 
 def charge_leadstatus():
+    if len(User.objects.all()) <= 0:
+        charge_users()
     init = True
     with open('publish/fake_data_csv/leadstatus.csv') as data_file:
         for line in data_file:
@@ -71,17 +75,17 @@ def charge_leadstatus():
             data = line.strip().split(',')
             new_leadstatus = LeadStatus()
             if data[0]:
-                lead = Lead.objects.get(id=data[0])
+                lead = Lead.objects.get(id=int(data[0]))
                 new_leadstatus.lead = lead
             new_leadstatus.accepted = bool(int(data[1]))
             new_leadstatus.in_progress = bool(int(data[2]))
             new_leadstatus.close_won = bool(int(data[3]))
             new_leadstatus.close_lost = bool(int(data[4]))
             if data[5]:
-                user = User.objects.get(id=data[5])
+                user = User.objects.get(id=int(data[5]))
                 new_leadstatus.publisher = user
             if data[6]:
-                user = User.objects.get(id=data[6])
+                user = User.objects.get(id=int(data[6]))
                 new_leadstatus.publisher = user
             new_leadstatus.save()
     return True

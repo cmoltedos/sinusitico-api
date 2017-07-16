@@ -9,5 +9,5 @@ urlpatterns = [
     url(r'^list$', views.get_leads, name='list_leads'),
     url(r'^enterprise', enterprise.get_enterprise, name='list_enterprices'),
     url(r'^login', views.login, name='login'),
-    url(r'^fake', views.charge_data, name='fake'),
+    url(r'^list_user', views.get_leads_by_user, name='list_by_user'),
 ]

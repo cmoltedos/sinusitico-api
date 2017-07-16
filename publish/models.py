@@ -29,6 +29,12 @@ class Lead(models.Model):
     oportunity = models.TextField(null=True)
     close_date = models.DateTimeField(verbose_name='date end', null=True)
 
+    def location_parser(self):
+        if not self.location:
+            return self.location
+        lat, lng = self.location.split()
+        return {'lat': float(lat), 'lng': float(lng)}
+
 class LeadStatus(models.Model):
     lead = models.ForeignKey(Lead, on_delete=models.CASCADE)
     accepted = models.BooleanField(default=False)

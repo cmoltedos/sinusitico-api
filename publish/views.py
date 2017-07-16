@@ -45,6 +45,7 @@ def get_leads(request):
         lead = leadstatus.lead
         day_pass = now() - lead.pub_date
         result = model_to_dict(lead)
+        result['location'] = lead.location_parser()
         is_premium = len([1 for value in result.values() if value != None]) >= 9
         result.update({'days_pass': day_pass.days, 'is_premium': is_premium})
         results.append(result)
@@ -58,8 +59,17 @@ def login(request):
     user = User.objects.get(name=json_data['username'])
     return JsonResponse(model_to_dict(user), safe=False)
 
-def charge_data(request):
-    # fake.charge_users()
-    fake.charge_leads()
-    return HttpResponse("Data upload")
-
+def get_leads_by_user(request):
+    user_id = request.META['X_LEADIN_USER']
+    user = User.objects.get(id=user_id)
+    results = list()
+    for leadstatus in LeadStatus.objects.all():
+        if leadstatus.consumer_id != user.id:
+            continue
+        lead = leadstatus.lead
+        day_pass = now() - lead.pub_date
+        result = model_to_dict(lead)
+        is_premium = len([1 for value in result.values() if value != None]) >= 9
+        result.update({'days_pass': day_pass.days, 'is_premium': is_premium})
+        results.append(result)
+    return JsonResponse({'list': results}, safe=False)
