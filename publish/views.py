@@ -9,14 +9,7 @@ from publish.models import Lead, Enterprise
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
-
-def get_last_lead(request):
-
-    return JsonResponse({})
-
-def get_photo(request):
-    return
+    return HttpResponse("Hello, world. You're at the Leadin index.")
 
 @csrf_exempt
 def new_lead(request):
@@ -39,7 +32,7 @@ def get_leads(request):
     for lead in Lead.objects.all():
         day_pass = now() - lead.pub_date
         result = model_to_dict(lead)
-        is_premium = len([1 for value in result.values() if value == None]) == 5
+        is_premium = len([1 for value in result.values() if value != None]) >= 8
         result.update({'days_pass': day_pass.days, 'is_premium': is_premium})
         results.append(result)
     return JsonResponse({'list': results}, safe=False)
